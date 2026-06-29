@@ -1,9 +1,9 @@
 import express from 'express';
 import cors from 'cors';
-import productsRouter from './src/routes/products.routes.js';
+import productsRouter from '../src/routes/products.routes.js';
 import bodyParser from 'body-parser';
-import { authentication } from './src/middlewares/authentication.js';
-import authRouter from './src/routes/auth.routes.js';
+import { authentication } from '../src/middlewares/authentication.js';
+import authRouter from '../src/routes/auth.routes.js';
 const app = express();
 
 // Middleware
