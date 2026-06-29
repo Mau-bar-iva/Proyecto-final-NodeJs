@@ -2,7 +2,6 @@ import express from 'express';
 import cors from 'cors';
 import productsRouter from './src/routes/products.routes.js';
 import bodyParser from 'body-parser';
-import { authentication } from './src/middlewares/authentication.js';
 import authRouter from './src/routes/auth.routes.js';
 const app = express();
 
@@ -13,7 +12,7 @@ app.use(bodyParser.json());
 
 // Rutas
 app.use('/auth', authRouter)
-app.use('/api/products', authentication, productsRouter);
+app.use('/api/products', productsRouter);
 
 // Middleware para manejar rutas no encontradas
 app.use((req, res, next) => {

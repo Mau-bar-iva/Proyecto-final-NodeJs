@@ -5,7 +5,7 @@ import { getProductById, createProduct, getAllProducts, deleteProduct } from '..
 
 router.get('/', getAllProducts);
 router.get('/:id', getProductById);
-router.post('/create', createProduct);
-router.delete('/:id', deleteProduct);
+router.post('/create', authentication, createProduct);
+router.delete('/:id', authentication, deleteProduct);
 
 export default router;
